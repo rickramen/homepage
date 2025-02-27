@@ -1,27 +1,33 @@
-// webpack.common.js
-
+// webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
+  mode: "development",
   entry: "./src/index.js",
   output: {
-    filename: "[name].[contenthash].js",
+    filename: "main.js",
     path: path.resolve(__dirname, "dist"),
+    clean: true,
   },
   plugins: [
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: "./public/index.html",
-      filename: "index.html",
+      template: "./src/index.html",
     }),
-  ],
+  ],  
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.css$/i,
         use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
+        type: "asset/resource",
       },
     ],
   },
