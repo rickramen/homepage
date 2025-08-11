@@ -131,3 +131,64 @@ footer svg {
 footer .copyright {
   text-align: center; 
 }
+
+/* Tablet styles */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+  .content-wrapper {
+    padding: 24px;
+  }
+  .aboutme .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .aboutme .content-wrapper img {
+    margin-right: 0;
+    margin-bottom: -40px;
+  }
+  .aboutme-text {
+    padding-left: 0;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .content-wrapper {
+    padding: 12px;
+  }
+  .aboutme .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .aboutme .content-wrapper img {
+    width: 180px;
+    height: 180px;
+    margin-right: 0;
+    margin-bottom: -24px;
+  }
+  .aboutme-text {
+    padding: 16px;
+    font-size: 1rem;
+  }
+  .project-image {
+    max-width: 100%;
+    height: auto;
+  }
+  .project-item {
+    padding: 16px;
+    min-height: unset;
+  }
+  footer {
+    padding: 16px 0;
+    font-size: 1rem;
+  }
+}
