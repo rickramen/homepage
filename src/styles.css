@@ -5,18 +5,34 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-}
-
-header {
-    text-align: center;
-    background-color: rgb(2, 117, 170); 
+    background-color: rgb(221, 221, 221); 
 }
 
 .aboutme .content-wrapper {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     gap: 32px;
+    background-color: rgb(56, 56, 56); 
+}
+
+.aboutme .content-wrapper img {
+  margin-right: -40px;   
+  z-index: 2;            /* ensures image is above the text box */
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18); 
+  border: 1px solid #000000;     
+  border-radius: 10px;            
+}
+
+.aboutme-text {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255); 
+  border: 1px solid #e0e0e0;     
+  border-radius: 10px;            
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10); 
+  padding: 24px;
+  transition: box-shadow 0.2s;
 }
 
 .content-wrapper {
@@ -37,7 +53,7 @@ header {
   grid-template-columns: repeat(3, 1fr);
   gap: 24px; 
   width: 100%;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -55,17 +71,63 @@ header {
 
 }
 
+.project-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);  
+}
+
+.icons-aboutme {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  align-self: flex-end;
+}
+
+.icons-aboutme a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.project-item-header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between; 
+}
+
+.icons-projects a{
+  text-decoration: none;
+  color: #000000; 
+  font-size: 1.5rem;
+}
+
+.icons-projects svg{
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: #000000; 
+}
+
+.icons-footer a {
+  text-decoration: none;
+  color: #ffffff; 
+  font-size: 2rem
+}
+
 footer {
-    background-color: rgb(2, 117, 170); 
+  background-color: rgb(56, 56, 56); 
+  color: #ffffff;
+}
+
+footer svg {
+   fill: #ffffff;
 }
 
 footer .copyright {
-    text-align: center; 
-}
-
-
-.icons-row{
-    text-decoration: none;
-    color: #000000; 
-    font-size: 2rem
+  text-align: center; 
 }
